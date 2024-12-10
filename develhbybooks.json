@@ -1,0 +1,167 @@
+{
+   "user_id": "develhby",
+   "user_info": [{
+      "user_img": "images/develhbyimg.jpg",
+      "이름": "홍길동",
+      "이메일": "hong@domain.com",
+      "가입일": "2024-01-15",
+      "전화번호": "010-1234-5678",
+      "주소": "서울시 강남구"
+    }
+     
+   ],
+   "purchased": [
+      {
+         "title": "Book Title 1",
+         "author": "Author Name 1",
+         "price": 12000,
+         "rating": 4.5,
+         "genre": "Fiction",
+         "publisher": "Publisher Name 1",
+         "img": "images/book1.jpg"
+      },
+      {
+         "title": "Book Title 2",
+         "author": "Author Name 2",
+         "price": 15000,
+         "rating": 4.7,
+         "genre": "Non-fiction",
+         "publisher": "Publisher Name 2",
+         "img": "images/book2.jpg"
+      },
+      {
+         "title": "Book Title 3",
+         "author": "Author Name 3",
+         "price": 13000,
+         "rating": 4.0,
+         "genre": "Mystery",
+         "publisher": "Publisher Name 3",
+         "img": "images/book3.jpg"
+      },
+      {
+         "title": "Book Title 4",
+         "author": "Author Name 4",
+         "price": 17000,
+         "rating": 4.8,
+         "genre": "Thriller",
+         "publisher": "Publisher Name 4",
+         "img": "images/book4.jpg"
+      },
+      {
+         "title": "Book Title 5",
+         "author": "Author Name 5",
+         "price": 20000,
+         "rating": 3.9,
+         "genre": "Fantasy",
+         "publisher": "Publisher Name 5",
+         "img": "images/book5.jpg"
+      },
+      {
+         "title": "Book Title 6",
+         "author": "Author Name 6",
+         "price": 25000,
+         "rating": 4.6,
+         "genre": "Historical Fiction",
+         "publisher": "Publisher Name 6",
+         "img": "images/book6.jpg"
+      },
+      {
+         "title": "Book Title 7",
+         "author": "Author Name 7",
+         "price": 22000,
+         "rating": 4.2,
+         "genre": "Science Fiction",
+         "publisher": "Publisher Name 7",
+         "img": "images/book7.jpg"
+      },
+      {
+         "title": "Book Title 8",
+         "author": "Author Name 8",
+         "price": 18000,
+         "rating": 3.8,
+         "genre": "Romance",
+         "publisher": "Publisher Name 8",
+         "img": "images/book8.jpg"
+      },
+      {
+         "title": "Book Title 9",
+         "author": "Author Name 9",
+         "price": 16000,
+         "rating": 4.1,
+         "genre": "Young Adult",
+         "publisher": "Publisher Name 9",
+         "img": "images/book9.jpg"
+      },
+      {
+         "title": "Book Title 10",
+         "author": "Author Name 10",
+         "price": 21000,
+         "rating": 4.3,
+         "genre": "Adventure",
+         "publisher": "Publisher Name 10",
+         "img": "images/book10.jpg"
+      }
+   ],
+   "basket": [
+      {
+         "title": "Book Title 21",
+         "author": "Author Name 21",
+         "price": 15000,
+         "rating": 4.6,
+         "genre": "Drama",
+         "publisher": "Publisher Name 21",
+         "img": "images/book21.jpg",
+         "cnt": 10
+      },
+      {
+         "title": "Book Title 22",
+         "author": "Author Name 22",
+         "price": 19000,
+         "rating": 4.1,
+         "genre": "Science",
+         "publisher": "Publisher Name 22",
+         "img": "images/book22.jpg",
+         "cnt": 5
+      },
+      {
+         "title": "Book Title 23",
+         "author": "Author Name 23",
+         "price": 22000,
+         "rating": 4.3,
+         "genre": "Health",
+         "publisher": "Publisher Name 23",
+         "img": "images/book23.jpg",
+         "cnt": 8
+      },
+      {
+         "title": "Book Title 24",
+         "author": "Author Name 24",
+         "price": 24000,
+         "rating": 4.5,
+         "genre": "Horror",
+         "publisher": "Publisher Name 24",
+         "img": "images/book24.jpg",
+         "cnt": 6
+      },
+      {
+         "title": "Book Title 25",
+         "author": "Author Name 25",
+         "price": 20000,
+         "rating": 4.2,
+         "genre": "Art",
+         "publisher": "Publisher Name 25",
+         "img": "images/book25.jpg",
+         "cnt": 12
+      },
+      {
+         "title": "Book Title 26",
+         "author": "Author Name 26",
+         "price": 21000,
+         "rating": 4.0,
+         "genre": "Literature",
+         "publisher": "Publisher Name 26",
+         "img": "images/book26.jpg",
+         "cnt": 7
+      }
+   ]
+}

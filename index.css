@@ -1,0 +1,200 @@
+* {
+   margin: 0;
+   padding: 0;
+   list-style: none;
+}
+
+.screen_out {
+   display: none;
+}
+
+button,
+summary,
+label {
+   cursor: pointer;
+}
+
+html,
+body {
+   height: 100%;
+}
+
+body {
+   font-family: 'Noto Sans KR', sans-serif;
+   color: #333;
+   background-image: url(./img/bgimg2.jpg);
+   background-size: cover;
+   background-attachment: fixed;
+   background-position: center;
+   background-repeat: no-repeat;
+   position: relative;
+}
+
+.container {
+   max-width: 1200px;
+   margin: 0 auto;
+   padding: 30px;
+}
+
+.header {
+   background-color: rgba(22, 22, 22, 0.9);
+   color: white;
+   padding: 15px;
+
+   border-radius: 10px;
+   margin-bottom: 30px;
+
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+}
+
+.header h1 {
+   font-size: 36px;
+   letter-spacing: -1px;
+   font-weight: 600;
+}
+
+.section {
+   background-color: rgba(255, 255, 255, 0.8);
+   margin-bottom: 30px;
+   padding: 30px;
+   border-radius: 15px;
+   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+   color: #333;
+   font-size: 24px;
+   margin-bottom: 20px;
+   font-weight: 600;
+   border-bottom: 2px solid #202020;
+   padding-bottom: 10px;
+}
+
+
+/* 회원 정보 */
+.userInfoContainer {
+   position: relative;
+   /* display: inline-block; */
+}
+
+.userInfoContainer img {
+   
+   width: 60px;
+   height: 60px;
+   border-radius: 50%;
+   /* object-fit: contain; */
+   cursor: pointer;
+   transition: transform 1s ease, box-shadow .5s ease;
+   border: 1px solid gray;
+}
+
+.userInfoContainer img:hover {
+   transform: scale(1.1);
+   box-shadow: 0 0 15px rgba(207, 207, 207, 0.5);
+}
+
+/* 회원 정보 팝업창 */
+.userInfoPopup {
+   position: absolute;
+   top: 100%;
+   left: 50%;
+   transform: translateX(-50%);
+   background-color: white;
+   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+   border-radius: 8px;
+   padding: 10px 15px;
+   width: 200px;
+   display: none;
+   z-index: 10;
+}
+
+.userInfoContainer:hover .userInfoPopup {
+   display: block;
+}
+
+.userInfoPopup div {
+   font-size: 14px;
+   color: #555;
+   margin-bottom: 8px;
+}
+
+/* 본문 */
+.books,
+.bestsellers,
+.cart {
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+   gap: 20px;
+}
+
+.book,
+.bestseller,
+.cartBook {
+   flex: 1;
+   max-width: 150px;
+   min-width: 110px;
+   background-color: #ffffff;
+   border-radius: 10px;
+   box-shadow: 0 4px 12px rgba(22, 22, 22, 0.1);
+   padding: 20px;
+   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.book img,
+.bestseller img,
+.cartBook img {
+   width: 100%;
+   max-width: 100px;
+   border-radius: 8px;
+   margin-bottom: 15px;
+   object-fit: cover;
+}
+
+.bookTitle {
+   font-size: 17px;
+   font-weight: bold;
+   color: #333;
+   margin-bottom: 5px;
+   transition: color 0.3s ease;
+}
+
+.bookTitle:hover {
+   color: #161616;
+}
+
+.bookAuthor {
+   font-size: 13px;
+   color: #888;
+   margin-bottom: 15px;
+}
+
+.book:hover,
+.bestseller:hover, 
+.cartBook:hover {
+   transform: translateY(-10px);
+   box-shadow: 0 8px 25px rgba(22, 22, 22, 0.5);
+}
+
+/* 반응형 */
+@media (max-width: 768px) {
+   .userInfo {
+      flex-direction: column;
+      align-items: flex-start;
+   }
+
+   .books,
+   .bestsellers,
+   .cartBook {
+      flex-direction: column;
+   }
+
+   .book,
+   .bestseller,
+   .cartBook {
+      min-width: 100%;
+      margin-bottom: 20px;
+   }
+}
