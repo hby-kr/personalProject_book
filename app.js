@@ -117,6 +117,7 @@ let basketsObj = {}; // 장바구니 리스트 객체. 그 안에 책리스트 �
 
 class BasketsObj {
    // 메서드 설정하기
+
    setBasket(basket) {
       // 매개변수는 (form정보로 만든 Basket의 새 인스턴스 객체)
 
@@ -131,13 +132,30 @@ class BasketsObj {
    }
    delBasket(num) {
       // 매개변수는 삭제버튼의 data- 로 등록된 숫자
-      if (num in this) {
-         // 만약 같은 숫자가 이미 있으면
-         this.total -= this[num].total; // 전체 가격에서 그 해당 상품의 가격 빼기.
-         delete this[num]; // 그 번호로 된 key 필드를 삭제.
-         // delete 명령은 JavaScript에서 객체에서 특정 속성을 삭제할 때 사용하는 연산자
-      } else {
-         alert("이미 삭제된 상품입니다.");
+      console.log(num);
+      console.log(this);
+
+      for (let book in this) {
+         if (isNaN(book)) continue;
+
+         let isbnNum = Number(this[book]["isbn"].replace(/-/g, ""));
+         if (num == isbnNum) {
+            // 만약 같은 숫자가 이미 있으면
+            let listPrice = this[book]["price"] * this[book]["cnt"];
+            this.total -= listPrice;
+            delete this[book];
+         } 
+      }
+   }
+
+   calcTotalPrice() {
+      for (let num in this) {
+         let book = this[num];
+         if (num === "total") {
+            continue;
+         }
+         let bookPrice = Number(book["price"]) * Number(book["cnt"]);
+         this.total += bookPrice;
       }
    }
 }
@@ -152,18 +170,26 @@ function Basket(form) {
    this.total = this.price * this.cnt;
 }
 
-// 특정 회원의 json파일에서 장바구니 목록을 가져와서 장바구니 객체의 자식요소로 넣기
+// 특정 회원의 json파일에서 장바구니 목록을 가져와서
+// 장바구니 객체의 자식요소로 넣기, 전체가격 계산하기
 const userCart = (data) => {
    let userBasket = data["baskets"]; // 장바구니 리스트가 각 객체인, 객체의 집합체인 배열
    basketsObj = {}; // 장바구니 초기화
-   basketsObj = Object.assign({}, userBasket); // 회원 장바구니 리스트를 추가.
+   basketsObj = Object.assign({ total: 0 }, userBasket); // 회원 장바구니 리스트를 추가.
+
+   basketsObj.__proto__ = BasketsObj.prototype; // 프로토타입 연결
+   basketsObj.calcTotalPrice(); // 메서드 사용
 };
 
 // basketsObj 객체 기반으로 장바구니 띄우기. (통합관리하기 위해)
 const printBasketObj = () => {
    cart.innerHTML = "";
 
+   console.log(basketsObj);
+
    for (let books in basketsObj) {
+      if (isNaN(books)) continue; // === if(books==total), 반복문의 해당 구문만 넘겨라.
+
       let book = basketsObj[books];
 
       let divEx = cartBook.cloneNode(true);
@@ -172,29 +198,36 @@ const printBasketObj = () => {
       for (let info in book) {
          // 책 장바구니 리스트 넣기
 
+         let delBtn = divEx.querySelector(".delBtn");
+
          if (info === "img") {
             let img = divEx.querySelector(info);
             img.src = book[info];
-         } else if (key === "isbn") {
-            let isbn = divEx.querySelector(info);
-            isbn.append(Number(book[info].replace(/-/g, "")));
+         } else if (info === "isbn") {
+            continue;
+            // let isbn = divEx.querySelector(info);
+            // isbn.append(Number(book[info].replace(/-/g, "")));
          } else {
             let div = divEx.querySelector("." + info);
             div?.append(document.createTextNode(book[info]));
          }
       }
 
-      
-      let delBtn = tr.querySelector(".delBtn");
-      delBtn.dataset.num = basket.num; //data-num=3
+      let delBtn = divEx.querySelector(".delBtn");
+      delBtn.dataset.num = Number(book["isbn"].replace(/-/g, ""));
       delBtn.onclick = (e) => {
          let delNum = e.target.dataset.num;
          basketsObj.delBasket(delNum); // delBasket메서드에 번호 넣어서 실행해.
+
          printBasketObj(); // 다시 출력해
+         
       };
-      basketCont.append(tr);
+      cart.append(divEx);
    }
-   totalPriceB.innerText = basketsObj["total"];
+
+   const totalPrice = document.getElementById("totalPrice");
+
+   totalPrice.append(basketsObj["total"]);
 };
 
 const submitHandeler = function (e) {
@@ -218,6 +251,7 @@ const loadUser = () => {
          showUserInfo(data);
          showPurchasedBooks(data, "purchased");
          userCart(data);
+         printBasketObj();
       })
       .catch((error) => {
          console.error("데이터 로딩에 있어서 오류 발생:", error); // 오류 처리
