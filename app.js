@@ -122,11 +122,13 @@ class BasketsObj {
    setBasket(basket) {
       // 매개변수는 (form정보로 만든 Basket의 새 인스턴스 객체)
 
-      // 같은 리스트가 없으면.. 중복체크 못했음. 왜냐. json의 구성 다시 구성할 필요가 있음
-      
-      this.assign(basket); // 객체의 필드추가
+      // 중복체크 못했음. 왜냐. json의 구성을 근본적으로 구성할 필요가 있음
+      basketsObj.assign(basket); // 객체의 필드추가
+      console.log(basketsObj);
+
       this.total += basket.total;
    }
+
    delBasket(num) {
       // 매개변수는 삭제버튼의 data- 로 등록된 숫자
       console.log(num);
@@ -172,8 +174,6 @@ const userCart = (data) => {
 const printBasketObj = () => {
    cart.innerHTML = "";
 
-   console.log(basketsObj);
-
    for (let books in basketsObj) {
       if (isNaN(books)) continue; // === if(books==total), 반복문의 해당 구문만 넘겨라.
 
@@ -212,8 +212,8 @@ const printBasketObj = () => {
    }
 
    const totalPrice = document.getElementById("totalPrice");
-   totalPrice.innerHTML="";
-   totalPrice.innerText= basketsObj["total"];
+   totalPrice.innerHTML = "";
+   totalPrice.innerText = basketsObj["total"];
 };
 
 // 단지 type을 만들었을 뿐.
@@ -229,11 +229,16 @@ function Basket(form) {
 
 const submitHandeler = function (e) {
    e.preventDefault();
+   
+   
    let basket = new Basket(this); // this는 form요소 -> 위 Basket 타입에 넣어서 객체하나 만들기
+   console.log(basket);
 
-   basketsObj.setBasket(basket);
-   // 새 객체(장바구니 리스트 안에 상품 하나정보)를 BasketsObj의 setBasket메서드에 넣음.
-   // basketsObj이라는 객체에다가, 프로토타입을 연결했기 때문에, 메서드를 쓸 수 있는 것임.
+   // !기존 상품 추가 안됨
+   basketsObj = Object.assign(basketsObj, new Object(basket));
+   basketsObj.total += basket.total;
+
+   console.log(basketsObj);
 
    printBasketObj(); // 그리고 다시 장바구니 출력.
 };
@@ -249,7 +254,7 @@ const loadUser = () => {
          showPurchasedBooks(data, "purchased");
          userCart(data);
          console.log(basketsObj);
-         
+
          printBasketObj();
       })
       .catch((error) => {
