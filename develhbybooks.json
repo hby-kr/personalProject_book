@@ -1,15 +1,13 @@
 {
    "user_id": "develhby",
-   "user_info": [{
-      "user_img": "images/develhbyimg.jpg",
-      "이름": "홍길동",
-      "이메일": "hong@domain.com",
-      "가입일": "2024-01-15",
-      "전화번호": "010-1234-5678",
-      "주소": "서울시 강남구"
-    }
-     
-   ],
+   "user_info": {
+      "userImg": "./img/develhbyimg.jpg",
+      "name": "사용자1",
+      "email": "hong@domain.com",
+      "signupDate": "2024-01-15",
+      "phone": "010-1234-5678",
+      "adrress": "서울시 영등포구 동번지"
+   },
    "purchased": [
       {
          "title": "Book Title 1",
@@ -18,7 +16,7 @@
          "rating": 4.5,
          "genre": "Fiction",
          "publisher": "Publisher Name 1",
-         "img": "images/book1.jpg"
+         "img": "img/book1.jpg"
       },
       {
          "title": "Book Title 2",
@@ -27,7 +25,7 @@
          "rating": 4.7,
          "genre": "Non-fiction",
          "publisher": "Publisher Name 2",
-         "img": "images/book2.jpg"
+         "img": "img/book2.jpg"
       },
       {
          "title": "Book Title 3",
@@ -36,7 +34,7 @@
          "rating": 4.0,
          "genre": "Mystery",
          "publisher": "Publisher Name 3",
-         "img": "images/book3.jpg"
+         "img": "img/book3.jpg"
       },
       {
          "title": "Book Title 4",
@@ -45,7 +43,7 @@
          "rating": 4.8,
          "genre": "Thriller",
          "publisher": "Publisher Name 4",
-         "img": "images/book4.jpg"
+         "img": "img/book4.jpg"
       },
       {
          "title": "Book Title 5",
@@ -54,7 +52,7 @@
          "rating": 3.9,
          "genre": "Fantasy",
          "publisher": "Publisher Name 5",
-         "img": "images/book5.jpg"
+         "img": "img/book5.jpg"
       },
       {
          "title": "Book Title 6",
@@ -63,7 +61,7 @@
          "rating": 4.6,
          "genre": "Historical Fiction",
          "publisher": "Publisher Name 6",
-         "img": "images/book6.jpg"
+         "img": "img/book6.jpg"
       },
       {
          "title": "Book Title 7",
@@ -72,7 +70,7 @@
          "rating": 4.2,
          "genre": "Science Fiction",
          "publisher": "Publisher Name 7",
-         "img": "images/book7.jpg"
+         "img": "img/book7.jpg"
       },
       {
          "title": "Book Title 8",
@@ -81,7 +79,7 @@
          "rating": 3.8,
          "genre": "Romance",
          "publisher": "Publisher Name 8",
-         "img": "images/book8.jpg"
+         "img": "img/book8.jpg"
       },
       {
          "title": "Book Title 9",
@@ -90,7 +88,7 @@
          "rating": 4.1,
          "genre": "Young Adult",
          "publisher": "Publisher Name 9",
-         "img": "images/book9.jpg"
+         "img": "img/book9.jpg"
       },
       {
          "title": "Book Title 10",
@@ -99,10 +97,10 @@
          "rating": 4.3,
          "genre": "Adventure",
          "publisher": "Publisher Name 10",
-         "img": "images/book10.jpg"
+         "img": "img/book10.jpg"
       }
    ],
-   "basket": [
+   "baskets": [
       {
          "title": "Book Title 21",
          "author": "Author Name 21",
@@ -110,7 +108,7 @@
          "rating": 4.6,
          "genre": "Drama",
          "publisher": "Publisher Name 21",
-         "img": "images/book21.jpg",
+         "img": "img/book21.jpg",
          "cnt": 10
       },
       {
@@ -120,7 +118,7 @@
          "rating": 4.1,
          "genre": "Science",
          "publisher": "Publisher Name 22",
-         "img": "images/book22.jpg",
+         "img": "img/book22.jpg",
          "cnt": 5
       },
       {
@@ -130,7 +128,7 @@
          "rating": 4.3,
          "genre": "Health",
          "publisher": "Publisher Name 23",
-         "img": "images/book23.jpg",
+         "img": "img/book23.jpg",
          "cnt": 8
       },
       {
@@ -140,7 +138,7 @@
          "rating": 4.5,
          "genre": "Horror",
          "publisher": "Publisher Name 24",
-         "img": "images/book24.jpg",
+         "img": "img/book24.jpg",
          "cnt": 6
       },
       {
@@ -150,7 +148,7 @@
          "rating": 4.2,
          "genre": "Art",
          "publisher": "Publisher Name 25",
-         "img": "images/book25.jpg",
+         "img": "img/book25.jpg",
          "cnt": 12
       },
       {
@@ -160,7 +158,7 @@
          "rating": 4.0,
          "genre": "Literature",
          "publisher": "Publisher Name 26",
-         "img": "images/book26.jpg",
+         "img": "img/book26.jpg",
          "cnt": 7
       }
    ]

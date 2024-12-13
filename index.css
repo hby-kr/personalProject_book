@@ -4,7 +4,7 @@
    list-style: none;
 }
 
-.screen_out {
+.screenOut {
    display: none;
 }
 
@@ -55,42 +55,29 @@ body {
    font-weight: 600;
 }
 
-.section {
-   background-color: rgba(255, 255, 255, 0.8);
-   margin-bottom: 30px;
-   padding: 30px;
-   border-radius: 15px;
-   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+h1>a {
+   color: white;
+   text-decoration: none;
 }
-
-h2 {
-   color: #333;
-   font-size: 24px;
-   margin-bottom: 20px;
-   font-weight: 600;
-   border-bottom: 2px solid #202020;
-   padding-bottom: 10px;
-}
-
 
 /* 회원 정보 */
-.userInfoContainer {
+#userInfoContainer {
    position: relative;
    /* display: inline-block; */
 }
 
-.userInfoContainer img {
-   
-   width: 60px;
-   height: 60px;
+#userInfoContainer img {
+
+   width: 40px;
+   height: 40px;
    border-radius: 50%;
    /* object-fit: contain; */
    cursor: pointer;
-   transition: transform 1s ease, box-shadow .5s ease;
+   transition: transform 1s ease, box-shadow .3s ease;
    border: 1px solid gray;
 }
 
-.userInfoContainer img:hover {
+#userInfoContainer img:hover {
    transform: scale(1.1);
    box-shadow: 0 0 15px rgba(207, 207, 207, 0.5);
 }
@@ -110,17 +97,35 @@ h2 {
    z-index: 10;
 }
 
-.userInfoContainer:hover .userInfoPopup {
+#userInfoContainer:hover .userInfoPopup {
    display: block;
 }
 
-.userInfoPopup div {
+.userInfoPopup li {
    font-size: 14px;
    color: #555;
    margin-bottom: 8px;
 }
 
-/* 본문 */
+
+/* ㅡㅡㅡㅡㅡㅡㅡㅡㅡ body ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
+.section {
+   background-color: rgba(255, 255, 255, 0.8);
+   margin-bottom: 30px;
+   padding: 30px;
+   border-radius: 15px;
+   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+   color: #333;
+   font-size: 24px;
+   margin-bottom: 20px;
+   font-weight: 600;
+   border-bottom: 2px solid #202020;
+   padding-bottom: 10px;
+}
+
 .books,
 .bestsellers,
 .cart {
@@ -172,7 +177,7 @@ h2 {
 }
 
 .book:hover,
-.bestseller:hover, 
+.bestseller:hover,
 .cartBook:hover {
    transform: translateY(-10px);
    box-shadow: 0 8px 25px rgba(22, 22, 22, 0.5);
