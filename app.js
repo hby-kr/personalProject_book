@@ -29,6 +29,7 @@ const showBooks = (data) => {
                form[key].value = bookObj[key];
             }
          }
+         form.onsubmit = submitHandeler;
       }
 
       bestsellers.append(divEx);
@@ -121,14 +122,10 @@ class BasketsObj {
    setBasket(basket) {
       // 매개변수는 (form정보로 만든 Basket의 새 인스턴스 객체)
 
-      if (basket.num in this) {
-         // 같은 리스트가 이미 있으면
-         alert("이미 존재합니다. 갱신하는 것은 작업해볼게요");
-      } else {
-         // 같은 리스트가 없으면
-         this[basket.num] = basket; // 객체의 필드추가
-         this.total += basket.total;
-      }
+      // 같은 리스트가 없으면.. 중복체크 못했음. 왜냐. json의 구성 다시 구성할 필요가 있음
+      
+      this.assign(basket); // 객체의 필드추가
+      this.total += basket.total;
    }
    delBasket(num) {
       // 매개변수는 삭제버튼의 data- 로 등록된 숫자
@@ -144,7 +141,7 @@ class BasketsObj {
             let listPrice = this[book]["price"] * this[book]["cnt"];
             this.total -= listPrice;
             delete this[book];
-         } 
+         }
       }
    }
 
@@ -158,16 +155,6 @@ class BasketsObj {
          this.total += bookPrice;
       }
    }
-}
-
-// 단지 type을 만들었을 뿐.
-function Basket(form) {
-   // 매개변수 == 각 상품의 폼요소임 들어가서 key:value쌍들을 가지는 객채로 만들어짐.
-   this.num = Number(form.num.value);
-   this.title = form.title.value;
-   this.price = Number(form.price.value);
-   this.cnt = Number(form.cnt.value);
-   this.total = this.price * this.cnt;
 }
 
 // 특정 회원의 json파일에서 장바구니 목록을 가져와서
@@ -220,15 +207,25 @@ const printBasketObj = () => {
          basketsObj.delBasket(delNum); // delBasket메서드에 번호 넣어서 실행해.
 
          printBasketObj(); // 다시 출력해
-         
       };
       cart.append(divEx);
    }
 
    const totalPrice = document.getElementById("totalPrice");
-
-   totalPrice.append(basketsObj["total"]);
+   totalPrice.innerHTML="";
+   totalPrice.innerText= basketsObj["total"];
 };
+
+// 단지 type을 만들었을 뿐.
+function Basket(form) {
+   // 매개변수 == 각 상품의 폼요소임. 변수로 들어가서 key:value쌍들을 가지는 객체로 만들어짐.
+   this.num = Number(form.num.value);
+   this.title = form.title.value;
+   this.author = form.author.value;
+   this.price = Number(form.price.value);
+   this.cnt = Number(form.cnt.value);
+   this.total = this.price * this.cnt;
+}
 
 const submitHandeler = function (e) {
    e.preventDefault();
@@ -251,6 +248,8 @@ const loadUser = () => {
          showUserInfo(data);
          showPurchasedBooks(data, "purchased");
          userCart(data);
+         console.log(basketsObj);
+         
          printBasketObj();
       })
       .catch((error) => {
