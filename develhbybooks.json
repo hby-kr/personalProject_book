@@ -16,7 +16,8 @@
          "rating": 4.5,
          "genre": "Fiction",
          "publisher": "Publisher Name 1",
-         "img": "img/book1.jpg"
+         "img": "img/book1.jpg",
+         "isbn": "978-1-2345-6789-0"
       },
       {
          "title": "Book Title 2",
@@ -25,7 +26,8 @@
          "rating": 4.7,
          "genre": "Non-fiction",
          "publisher": "Publisher Name 2",
-         "img": "img/book2.jpg"
+         "img": "img/book2.jpg",
+         "isbn": "978-1-2345-6790-7"
       },
       {
          "title": "Book Title 3",
@@ -34,7 +36,8 @@
          "rating": 4.0,
          "genre": "Mystery",
          "publisher": "Publisher Name 3",
-         "img": "img/book3.jpg"
+         "img": "img/book3.jpg",
+         "isbn": "978-1-2345-6791-4"
       },
       {
          "title": "Book Title 4",
@@ -43,7 +46,8 @@
          "rating": 4.8,
          "genre": "Thriller",
          "publisher": "Publisher Name 4",
-         "img": "img/book4.jpg"
+         "img": "img/book4.jpg",
+         "isbn": "978-1-2345-6792-1"
       },
       {
          "title": "Book Title 5",
@@ -52,7 +56,8 @@
          "rating": 3.9,
          "genre": "Fantasy",
          "publisher": "Publisher Name 5",
-         "img": "img/book5.jpg"
+         "img": "img/book5.jpg",
+         "isbn": "978-1-2345-6793-8"
       },
       {
          "title": "Book Title 6",
@@ -61,7 +66,8 @@
          "rating": 4.6,
          "genre": "Historical Fiction",
          "publisher": "Publisher Name 6",
-         "img": "img/book6.jpg"
+         "img": "img/book6.jpg",
+         "isbn": "978-1-2345-6794-5"
       },
       {
          "title": "Book Title 7",
@@ -70,7 +76,8 @@
          "rating": 4.2,
          "genre": "Science Fiction",
          "publisher": "Publisher Name 7",
-         "img": "img/book7.jpg"
+         "img": "img/book7.jpg",
+         "isbn": "978-1-2345-6795-2"
       },
       {
          "title": "Book Title 8",
@@ -79,7 +86,8 @@
          "rating": 3.8,
          "genre": "Romance",
          "publisher": "Publisher Name 8",
-         "img": "img/book8.jpg"
+         "img": "img/book8.jpg",
+         "isbn": "978-1-2345-6796-9"
       },
       {
          "title": "Book Title 9",
@@ -88,7 +96,8 @@
          "rating": 4.1,
          "genre": "Young Adult",
          "publisher": "Publisher Name 9",
-         "img": "img/book9.jpg"
+         "img": "img/book9.jpg",
+         "isbn": "978-1-2345-6797-6"
       },
       {
          "title": "Book Title 10",
@@ -97,7 +106,8 @@
          "rating": 4.3,
          "genre": "Adventure",
          "publisher": "Publisher Name 10",
-         "img": "img/book10.jpg"
+         "img": "img/book10.jpg",
+         "isbn": "978-1-2345-6798-3"
       }
    ],
    "baskets": [
@@ -109,7 +119,8 @@
          "genre": "Drama",
          "publisher": "Publisher Name 21",
          "img": "img/book21.jpg",
-         "cnt": 10
+         "cnt": 10,
+         "isbn": "978-1-2345-6899-7"
       },
       {
          "title": "Book Title 22",
@@ -119,7 +130,8 @@
          "genre": "Science",
          "publisher": "Publisher Name 22",
          "img": "img/book22.jpg",
-         "cnt": 5
+         "cnt": 5,
+         "isbn": "978-1-2345-6900-3"
       },
       {
          "title": "Book Title 23",
@@ -129,7 +141,8 @@
          "genre": "Health",
          "publisher": "Publisher Name 23",
          "img": "img/book23.jpg",
-         "cnt": 8
+         "cnt": 8,
+         "isbn": "978-1-2345-6901-0"
       },
       {
          "title": "Book Title 24",
@@ -139,7 +152,8 @@
          "genre": "Horror",
          "publisher": "Publisher Name 24",
          "img": "img/book24.jpg",
-         "cnt": 6
+         "cnt": 6,
+         "isbn": "978-1-2345-6902-7"
       },
       {
          "title": "Book Title 25",
@@ -149,7 +163,8 @@
          "genre": "Art",
          "publisher": "Publisher Name 25",
          "img": "img/book25.jpg",
-         "cnt": 12
+         "cnt": 12,
+         "isbn": "978-1-2345-6903-4"
       },
       {
          "title": "Book Title 26",
@@ -159,7 +174,8 @@
          "genre": "Literature",
          "publisher": "Publisher Name 26",
          "img": "img/book26.jpg",
-         "cnt": 7
+         "cnt": 7,
+         "isbn": "978-1-2345-6904-1"
       }
    ]
 }

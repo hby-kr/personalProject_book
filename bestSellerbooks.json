@@ -6,8 +6,9 @@
       "rating": 4.4,
       "genre": "Biography",
       "publisher": "Publisher Name 11",
-      "img": "images/book11.jpg",
-      "cnt": 2
+      "img": "img/book11.jpg",
+      "cnt": 2,
+      "isbn": "978-1-2345-7000-0"
    },
    {
       "title": "Book Title 12",
@@ -16,8 +17,9 @@
       "rating": 4.0,
       "genre": "Self-help",
       "publisher": "Publisher Name 12",
-      "img": "images/book12.jpg",
-      "cnt": 1
+      "img": "img/book12.jpg",
+      "cnt": 1,
+      "isbn": "978-1-2345-7001-7"
    },
    {
       "title": "Book Title 13",
@@ -26,8 +28,9 @@
       "rating": 4.7,
       "genre": "Health",
       "publisher": "Publisher Name 13",
-      "img": "images/book13.jpg",
-      "cnt": 3
+      "img": "img/book13.jpg",
+      "cnt": 3,
+      "isbn": "978-1-2345-7002-4"
    },
    {
       "title": "Book Title 14",
@@ -36,8 +39,9 @@
       "rating": 4.2,
       "genre": "Philosophy",
       "publisher": "Publisher Name 14",
-      "img": "images/book14.jpg",
-      "cnt": 2
+      "img": "img/book14.jpg",
+      "cnt": 2,
+      "isbn": "978-1-2345-7003-1"
    },
    {
       "title": "Book Title 15",
@@ -46,8 +50,9 @@
       "rating": 4.5,
       "genre": "Cookbook",
       "publisher": "Publisher Name 15",
-      "img": "images/book15.jpg",
-      "cnt": 1
+      "img": "img/book15.jpg",
+      "cnt": 1,
+      "isbn": "978-1-2345-7004-8"
    },
    {
       "title": "Book Title 16",
@@ -56,8 +61,9 @@
       "rating": 4.3,
       "genre": "Art",
       "publisher": "Publisher Name 16",
-      "img": "images/book16.jpg",
-      "cnt": 3
+      "img": "img/book16.jpg",
+      "cnt": 3,
+      "isbn": "978-1-2345-7005-5"
    },
    {
       "title": "Book Title 17",
@@ -66,8 +72,9 @@
       "rating": 4.6,
       "genre": "Travel",
       "publisher": "Publisher Name 17",
-      "img": "images/book17.jpg",
-      "cnt": 2
+      "img": "img/book17.jpg",
+      "cnt": 2,
+      "isbn": "978-1-2345-7006-2"
    },
    {
       "title": "Book Title 18",
@@ -76,8 +83,9 @@
       "rating": 4.1,
       "genre": "Education",
       "publisher": "Publisher Name 18",
-      "img": "images/book18.jpg",
-      "cnt": 1
+      "img": "img/book18.jpg",
+      "cnt": 1,
+      "isbn": "978-1-2345-7007-9"
    },
    {
       "title": "Book Title 19",
@@ -86,8 +94,9 @@
       "rating": 4.4,
       "genre": "Psychology",
       "publisher": "Publisher Name 19",
-      "img": "images/book19.jpg",
-      "cnt": 3
+      "img": "img/book19.jpg",
+      "cnt": 3,
+      "isbn": "978-1-2345-7008-6"
    },
    {
       "title": "Book Title 20",
@@ -96,7 +105,8 @@
       "rating": 4.0,
       "genre": "Economics",
       "publisher": "Publisher Name 20",
-      "img": "images/book20.jpg",
-      "cnt": 2
+      "img": "img/book20.jpg",
+      "cnt": 2,
+      "isbn": "978-1-2345-7009-3"
    }
 ]

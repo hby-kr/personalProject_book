@@ -13,7 +13,7 @@
 
 
    <div class="header">
-      <h1><a href="#">Ebook Store</a></h1>
+      <h1><a href="https://hby-kr.github.io/personalProject_book/">Ebook Store</a></h1>
 
       <div>
          <button id="loginBtn">로그인</button>
@@ -60,42 +60,56 @@
 
             <div class="bestseller" id="bestseller">
                <img src="" alt="">
-               <div class="title"></div>
-               <div class="author"></div>
-               <div class="price"></div>
-               <div class="rating"></div>
-               <div class="cnt"></div>
-            </div>
+         
+               <form name="a" action="#" class="basketForm">
+                  <h4 class="title"></h4>
+                  <p class="author"></p>
+                  <p class="rating"></p>
+                  <p><span class="price"></span>원</p>
+                  <p>
+                     <label>수량 :
+                        <input name="cnt" class="cnt" type="number" min="1" max="10" value="1">
+                     </label>
+                  </p>
 
-         </div>
-      </div>
-
-      <!-- 장바구니 섹션 -->
-      <div class="section">
-         <h2>내 카트에 담긴 책</h2>
-         <div class="cart">
-
-            <div class="cartBook">
-               <img src="img/book17.jpg" alt="Book Title 17">
-               <div class="bookTitle">Book Title 17</div>
-               <div class="bookAuthor">Author Name 17</div>
-               <div class="bookPrice">29000원</div>
-               <div class="bookRating">평점: 4.6</div>
-               <div class="bookCount">수량: 2</div>
-            </div>
-
-
-
-            <div class="cartBook">
-               <img src="img/book18.jpg" alt="Book Title 18">
-               <div class="bookTitle">Book Title 18</div>
-               <div class="bookAuthor">Author Name 18</div>
-               <div class="bookPrice">32000원</div>
-               <div class="bookRating">평점: 4.1</div>
-               <div class="bookCount">수량: 1</div>
+                  <p>
+                     <input type="hidden" name="num" value="">
+                     <input type="hidden" name="title" value="">
+                     <input type="hidden" name="author" value="">
+                     <input type="hidden" name="price" value="">
+                     <button type="submit">장바구니</button>
+                     <button type="button">바로구매</button>
+                  </p>
+               </form>
             </div>
          </div>
+
+
       </div>
+   </div>
+
+   <!-- 장바구니 섹션 -->
+   <div class="section">
+      <h2>내 카트에 담긴 책</h2>
+      <div class="cart" id="cart">
+
+         <div class="cartBook" id="cartBook">
+            <img src="img/book17.jpg" alt="Book Title 17">
+            <div class="title">Book Title 17</div>
+            <div class="author">Author Name 17</div>
+            <div class="price">29000원</div>
+            <div class="rating">평점: 4.6</div>
+            <div class="bookCount">수량: 2</div>
+            <div class="isbn"></div>
+         </div>
+
+      </div>
+      <p><strong id="totalPrice">전체가격:</strong></p>
+      <div>
+
+
+      </div>
+   </div>
    </div>
 
 
